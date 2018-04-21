@@ -75,6 +75,8 @@ public class DetalleNotaFragment extends Fragment{
                     }
 
                     Toast.makeText(getContext(),"Informacion Guardada Correctamente",Toast.LENGTH_LONG).show();
+                    titulo.setText("");
+                    descripcion.setText("");
                 }catch (Exception e){
                     Toast.makeText(getContext(),e.getMessage(),Toast.LENGTH_LONG).show();
                 }
