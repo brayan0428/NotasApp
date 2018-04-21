@@ -13,5 +13,29 @@
         android:id="@+id/Descripcion"
         android:layout_width="match_parent"
         android:layout_height="250dp"
+        android:inputType="textMultiLine"
+        android:gravity="bottom"
         android:hint="Descripción"/>
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <Button
+            android:id="@+id/GuardarNota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guardar"
+            android:textColor="#ffff"
+            android:layout_marginRight="10dp"
+            android:background="@color/colorPrimary"/>
+        <Button
+            android:id="@+id/Cancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            android:background="#ccc"/>
+    </LinearLayout>
+
 </LinearLayout>

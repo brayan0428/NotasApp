@@ -39,7 +39,7 @@ public class NotasAdapter extends  RecyclerView.Adapter<NotasAdapter.ViewHolder>
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
         holder.titulo.setText(notas.get(position).getTitulo());
-        holder.fecha.setText(notas.get(position).getFecha());
+        holder.fecha.setText(notas.get(position).getFecha().toString());
         holder.item.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,6 +47,7 @@ public class NotasAdapter extends  RecyclerView.Adapter<NotasAdapter.ViewHolder>
                 bundle.putInt("IdNota",notas.get(position).getId());
                 bundle.putString("Titulo",notas.get(position).getTitulo());
                 bundle.putString("Descripcion",notas.get(position).getDescripcion());
+                bundle.putString("Accion","Act");
                 FragmentManager fragmentManager = ((AppCompatActivity)context).getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 DetalleNotaFragment detalleNotaFragment = new DetalleNotaFragment();
